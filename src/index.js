@@ -1,23 +1,18 @@
 module.exports = function reverse (n) {
-    console.log(num);
-  console.log(num.toString().length);
-  let str = num.toString();
+  console.log(n);
+  console.log(n.toString().length);
+  let str = Math.abs(n).toString();
+  console.log(str);
+  console.log(str.toString().length);
   let result = '';
-  if (num >= 0) {  
+  let result2 = '';
   for (i=0; i < str.length; i++) {
+    const char = str[i];
+     if (char !== '0') result = char + result;
+    else if (char === '0' && str[i + 1] && str[i + 1] !== '0') result = char + result;
     //console.log(result);
-    result = str[i]+result;
+    console.log(result);
      }
-  console.log(result);
+   console.log(result);
   return result;
-  }
-  else {
-
-for (i=1; i < str.length; i++) {
-    //console.log(result);
-    result = str[i]+result;
-     }
-  console.log(-result);
-  return -result;
-  }
 }
